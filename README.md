@@ -6,4 +6,5 @@
 >
 > **好呀**，**不用打压缩包了~**
 
-![68296699_p0](https://w.wallhaven.cc/full/2y/wallhaven-2yp6gg.png)
+
+![background](https://github.com/user-attachments/assets/a1dc8074-d802-46ba-a0bc-9591d083fbea)
