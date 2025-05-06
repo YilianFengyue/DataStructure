@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+#include <stack>
 
 typedef struct TNode *Position;
 typedef int ElementType;
@@ -45,25 +45,35 @@ void InsertRight(BinTree parent, ElementType data) {
 
 /* 中序遍历（提示） */
 void InOrderTraversal(BinTree T) {
-    // 你来补全
-    if (T != nullptr) {
-        InOrderTraversal(T->Left); // 访问左子树
-        cout << T->Data << " ";     // 访问根结点
-        InOrderTraversal(T->Right); // 访问右子树
+    stack<BinTree> s;
+    while (T != NULL || !s.empty()) {
+        while (T != NULL) {
+            s.push(T->Data);
+            T = T->Left;
+        }
+        if (!s.empty()) {
+            T = s.top();
+            s.pop();
+            cout << T->Data << " ";
+            T = T->Right;
+        }
     }
+    
 }
+struct PyPrintConfig {
+    string sep = " ";
+    string end = "\n";
+};
+
 
 /* 示例：创建一棵简单的树并遍历 */
 int main() {
-    BinTree root = CreateNode(1);
-    InsertLeft(root, 2);
-    InsertRight(root, 3);
-    InsertLeft(root->Left, 4);
-    InsertRight(root->Left, 5);
-
-    printf("中序遍历结果：");
-    InOrderTraversal(root);
-    printf("\n");
-
+    stack<int> s;
+    s.push(1);
+    s.push(2);
+    s.pop();
+    cout<<s.top()<<endl;
+    
     return 0;
+    
 }
