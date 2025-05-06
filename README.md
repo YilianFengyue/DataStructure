@@ -6,4 +6,4 @@
 >
 > **好呀**，**不用打压缩包了~**
 
-![68296699_p0](C:\Users\123\Desktop\DataStructure\assets\68296699_p0.png)
+![68296699_p0](https://w.wallhaven.cc/full/2y/wallhaven-2yp6gg.png)
